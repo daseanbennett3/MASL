@@ -35,19 +35,27 @@ def validate_info():
         except FileNotFoundError:
             sys.exit(f"Could not read {sys.argv[1]}")
         else:
+            #open and write to the new csv file (team_standings.csv)
             with open(sys.argv[2], "w") as CSVfile:
+                #write to the CSV file with "Team Name", "Win/Loss" and "Goal Differential" as the headers
                 writer = csv.DictWriter(CSVfile, fieldnames=["Team Name", " Win/Loss", " Goal Differential"])
+                #write to the header
                 writer.writeheader()
+                #write to the file row by row
                 for each_row in output:
                     writer.writerow(each_row)
-
-#similar to Fuel.py
+                    
+#use the function referenced in line #29 to convert to the "#/#" stats to "X Record"
 def win_ratio(Win_Loss):
+    #split the input on the "/" so you just work with the numbers
     x, y = Win_Loss.split("/")
+    #convert the numbers to numbers that python can read ie integers
     numb_x = int(x)
     numb_y = int(y)
+    #create a variable equal to quotient of the numbers that were just split
     try:
         percent = (numb_x/numb_y)
+    #if dividing a number by 0 in pyhton, it is considered a Zero Division Error
     except(ZeroDivisionError):
         return " Perfect Record"
     if percent > 1:
@@ -57,7 +65,9 @@ def win_ratio(Win_Loss):
     else:
         return " Tying Record"
 
+#use the function referenced in line #31 to convert the Goal Differential to either 'Positive' or 'Negative' with a 'Super' prefix if above or below 25 or -25 respectively
 def positive_or_negative(GoalDifferential):
+    #convert the Goal Differential to a readable number ie an integer
     if int(GoalDifferential) > 0 and int(GoalDifferential) <= 25:
         return " Positive"
     elif int(GoalDifferential) > 25:
@@ -69,13 +79,6 @@ def positive_or_negative(GoalDifferential):
     else:
         return " Neutral"
 
+#always add this at the end
 if __name__ == "__main__":
     main()
-
-"""
-Dallas Sidekicks,1/14,-50
-Chihuahua Savage,8/7,25
-Mesquite Outlaws,9/6,10
-Monterrey Flash,15/0,100
-Harrisburg Heat,3/12,-20
-"""
