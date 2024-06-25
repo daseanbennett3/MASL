@@ -45,7 +45,7 @@ def validate_info():
                 for each_row in output:
                     writer.writerow(each_row)
                     
-#use the function referenced in line #29 to convert to the "#/#" stats to "X Record"
+#use the function referenced in line #29 to convert the "#/#" stats to "X Record"
 def win_ratio(Win_Loss):
     #split the input on the "/" so you just work with the numbers
     x, y = Win_Loss.split("/")
