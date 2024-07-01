@@ -1,2 +1,4 @@
-1. Create the input: a CSV file named TEAM_STATS.csv with three columns named "TeamName", "Win_Loss", and "GoalDifferential" with TeamName formatted any way, Win_Loss formatted n/n, and GoalDifferential formatted +/-n
-2. 
+1. Create The Input: a CSV file named TEAM_STATS.csv with three columns named "TeamName", "Win_Loss", and "GoalDifferential" with TeamName formatted any way, Win_Loss formatted n/n, and GoalDifferential formatted +/-n
+2. Import The Modules: import sys becuase we will be using command-line arguments as a validatpr and import csv because we will be reading and writing into a CSV file.
+3. Define The Main Function: def main with just one function that we will be used to validate the command-line argument that the user will type in.
+4. Understanding The Function in the Main Function: We first want the user to type "python" followed by "code.py" in the [0] spot because that the name of the file to be ran. In the [1] spot wewant the name of the CSV file created as input ie  a file named "TEAM_STATS.csv" that we will be reading and in the [2] spot we want the name of the CSV file "TEAM_STANDINGS.csv" that we will be writing to.
