@@ -6,4 +6,6 @@
 6. Check The Length if the CMD-Line Arg: If the LENgth of the SYStem.ARGVment (the input of the user in the command prompt) is less 3 then SYStem.EXIT() with a message. Do the same elif its greater than 3 since we want exactly 3 arguments after the user types "python"
 7. Does [1] and [2] End in .CSV?: Continue the if-else statement with elif not the SYS.ARGVument in the [1] OR the [2] spot ENDSWITH ".CSV" then SYStem.EXIT() with a message.
 8. END the IF-ELSE Statment with a TRY: Finish the IF-ELSE statement with the "catch all" ie the ELSE being availvale if the previous 3 condtions have passed.
-9.  TRY in the ELSE: 
+9. TRY in the ELSE: Start the TRY WITH OPENing up the the input in the [1] as an F string that will be read AS a CSVFILE
+10. Read the CSV File That Was Just Created: created a variable equal to a csv.DictReader that takes in the CSVFILE as its parameter
+11. Read Through Every Row: Read through each_row in the variable that was created as the csv.DictReader  
