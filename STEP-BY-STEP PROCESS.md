@@ -9,4 +9,5 @@
 9. TRY in the ELSE: Start the TRY WITH OPENing up the the input in the [1] as an F string that will be read AS a CSVFILE
 10. Read the CSV File That Was Just Created: created a variable equal to a csv.DictReader that takes in the CSVFILE as its parameter
 11. Read Through Every Row: Read through each_row in the variable that was created as the csv.DictReader
-12. C
+12. Read The Row From The Input: Create a variable equal to the desired new row name (row name to write to) that has each_row and ["the row to read"] as the parameters
+13. Do The Same For The Next Column: 
